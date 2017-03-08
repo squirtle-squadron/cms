@@ -2,6 +2,7 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
+const pageEvents = require('./pages/events');
 
 $(() => {
   setAPIOrigin(location, config);
@@ -12,6 +13,7 @@ $(() => {
   $('#exit').on('click', function () {
     $('#sign-out').submit();
   });
+  $('.create-page').on('submit', pageEvents.onCreatePage);
 });
 
 const handlers = require('./auth/events');
