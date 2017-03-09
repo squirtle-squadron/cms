@@ -7,7 +7,7 @@ const indexPages = function (data) {
 };
 
 const showPage = function (data) {
-
+  console.log(data);
 };
 
 const showSuccess = function () {
