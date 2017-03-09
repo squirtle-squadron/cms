@@ -15,6 +15,7 @@ $(() => {
     $('#sign-out').submit();
   });
   $('.create-page').on('submit', pageEvents.onCreatePage);
+  $('.update-page').on('submit', pageEvents.onUpdatePage);
 });
 
 

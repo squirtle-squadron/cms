@@ -2,11 +2,11 @@
 
 // const showCommentsTemplate = require('../templates/comment-listing.handlebars');
 
-const showAlbums = function (data) {
+const showPages = function (data) {
 
 };
 
-const showAlbum = function (data) {
+const showPage = function (data) {
 
 };
 
@@ -18,8 +18,8 @@ const onShowError = function () {
   $('.log').text('This album has no comments');
 };
 
-const onPostSuccess = function () {
-
+const onPostSuccess = function (data) {
+  console.log(data);
 };
 
 const onError = function () {
@@ -41,8 +41,8 @@ const onCreateError = function() {
 
 
 module.exports = {
-  showAlbum,
-  showAlbums,
+  showPage,
+  showPages,
   onError,
   onPostSuccess,
   showSuccess,

@@ -44,9 +44,9 @@ const destroyPage = function(id){
   });
 };
 
-const updatePage = function(id, data) {
+const updatePage = function(data) {
   return $.ajax({
-    url: config.apiOrigin + '/pages/' + id,
+    url: config.apiOrigin + '/pages/' + data.page.id,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,

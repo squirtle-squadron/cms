@@ -10,8 +10,8 @@ const onCreatePage = function (event) {
   let data = getFormFields(event.target);
   api.createPage(data)
   .then((response) => {
-    store.album = response.album;
-    ui.onPostSuccess(response.album);
+    store.page = response.page;
+    ui.onPostSuccess(response.page);
   }).catch(ui.onCreateError);
 };
 
@@ -39,7 +39,7 @@ const onDeletePage = function(event){
 const onUpdatePage = function(event){
   event.preventDefault();
   let info = getFormFields(event.target);
-  api.updatePage(+$(this).data('id'), info)
+  api.updatePage(info)
     .then(ui.onUpdateSuccess)
     .catch(ui.onError);
 };
