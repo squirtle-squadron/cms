@@ -3,6 +3,7 @@
 const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
 const pageEvents = require('./pages/events');
+const handlers = require('./auth/events');
 
 $(() => {
   setAPIOrigin(location, config);
@@ -16,7 +17,6 @@ $(() => {
   $('.create-page').on('submit', pageEvents.onCreatePage);
 });
 
-const handlers = require('./auth/events');
 
 $(document).ready(handlers.addHandlers);
 // use require with a reference to bundle the file and use it in this file
