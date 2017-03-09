@@ -1,9 +1,14 @@
 'use strict';
-
+const showBlogTemplate = require('../templates/blog-listing.handlebars');
 // const showCommentsTemplate = require('../templates/comment-listing.handlebars');
 
 const indexBlogs = function (data) {
   console.log(data);
+  let showBlogsHtml = showBlogTemplate({blogs: data.blogs});
+  console.log(showBlogTemplate);
+
+$('.log').html(showBlogsHtml);
+
 };
 
 const showBlog = function (data) {
