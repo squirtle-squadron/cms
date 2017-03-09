@@ -15,17 +15,11 @@ const onCreatePage = function (event) {
   }).catch(ui.onCreateError);
 };
 
-const onShowPage = function (event) {
+const onIndexPage = function (event) {
   event.preventDefault();
-    api.showPages()
-    .then(ui.showPages)
-    .catch(ui.onShowError);
-};
-
-const onShowPageComments = function (event) {
-  event.preventDefault();
-    api.showPageComments(+$(this).data('id'))
-    .then(ui.onShowPageComments)
+  let data = event;
+    api.indexPages(data)
+    .then(ui.indexPages)
     .catch(ui.onShowError);
 };
 
@@ -47,7 +41,7 @@ const onUpdatePage = function(event){
 module.exports = {
   onUpdatePage,
   onCreatePage,
-  onShowPage,
+  onIndexPage,
+  // onShowPage,
   onDeletePage,
-  onShowPageComments
 };

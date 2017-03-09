@@ -14,6 +14,7 @@ $(() => {
   $('#exit').on('click', function () {
     $('#sign-out').submit();
   });
+  $('#page-index').on('click', pageEvents.onIndexPage);
   $('.create-page').on('submit', pageEvents.onCreatePage);
   $('.update-page').on('submit', pageEvents.onUpdatePage);
 });

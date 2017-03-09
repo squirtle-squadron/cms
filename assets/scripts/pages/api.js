@@ -14,7 +14,7 @@ const createPage = function (data) {
   });
 };
 
-const showPages = function () {
+const indexPages = function () {
   return $.ajax({
     url: config.apiOrigin + '/pages',
     headers: {
@@ -58,7 +58,7 @@ const updatePage = function(data) {
 module.exports = {
   createPage,
   showPage,
-  showPages,
+  indexPages,
   destroyPage,
   updatePage
 };
