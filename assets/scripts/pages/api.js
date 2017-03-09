@@ -34,9 +34,9 @@ const showPage = function (id) {
   });
 };
 
-const destroyPage = function(id){
+const destroyPage = function(data){
   return $.ajax({
-    url: config.apiOrigin + '/pages/' + id,
+    url: config.apiOrigin + '/pages/' + data.page.id,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
