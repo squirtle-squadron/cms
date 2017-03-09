@@ -1,17 +1,17 @@
 'use strict';
-
-const showPageTemplate = require('../templates/page-listing.handlebars');
+const showBlogTemplate = require('../templates/blog-listing.handlebars');
 // const showCommentsTemplate = require('../templates/comment-listing.handlebars');
 
-const indexPages = function (data) {
+const indexBlogs = function (data) {
   console.log(data);
-  let showPagesHtml = showPageTemplate({ pages: data.pages });
-  console.log(showPageTemplate);
-  // selects the content element and appends new HTML into it
-  $('.log').append(showPagesHtml);
+  let showBlogsHtml = showBlogTemplate({blogs: data.blogs});
+  console.log(showBlogTemplate);
+
+$('.log').html(showBlogsHtml);
+
 };
 
-const showPage = function (data) {
+const showBlog = function (data) {
   console.log(data);
 };
 
@@ -20,7 +20,7 @@ const showSuccess = function () {
 };
 
 const onShowError = function () {
-  $('.log').text('This page does not exsist');
+  $('.log').text('This blog does not exsist');
 };
 
 const onPostSuccess = function (data) {
@@ -46,8 +46,8 @@ const onCreateError = function() {
 
 
 module.exports = {
-  showPage,
-  indexPages,
+  showBlog,
+  indexBlogs,
   onError,
   onPostSuccess,
   showSuccess,

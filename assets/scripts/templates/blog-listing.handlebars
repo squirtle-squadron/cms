@@ -1,0 +1,13 @@
+{{#each blogs as |blog|}}
+
+  {{log  this}}
+
+  <ul data-id="{{blog.id}}">
+    <li><small>Title: {{blog.title}}</small></li>
+      {{#if blog.content }}
+        {{blog.content}}
+      {{else}}
+        No description.
+      {{/if}}
+    </ul>
+{{/each}}

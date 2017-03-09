@@ -37,7 +37,8 @@ const onShowPage = function (event) {
 
 const onDeletePage = function(event){
   event.preventDefault();
-  api.destroyPage(+$(this).data('id'))
+  let data = getFormFields(event.target);
+  api.destroyPage(data)
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
