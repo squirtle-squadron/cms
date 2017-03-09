@@ -234,9 +234,17 @@
             </div>
           </div>
           <button type="button" class="btn btn-default" id="page-index">Index of Page</button>
+          <!-- Form to show a page by ID -->
         <form class='show-page'>
           <button type="submit" class="btn btn-default">Show a page</button>
           <input type="text" id='page-id' placeholder="Enter Content for Body">
         </form>
+        <!-- Button to delete pages -->
+
+        <form class='delete-page'>
+          <button type="submit" class="btn btn-default">Delete page</button>
+          <input type="text" name="page[id]" id='page-id' placeholder="Enter page ID">
+        </form>
+
       </body>
 </html>
