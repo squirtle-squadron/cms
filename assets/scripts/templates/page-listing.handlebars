@@ -1,0 +1,13 @@
+{{#each pages as |page|}}
+
+  {{log  this}}
+
+  <ul data-id="{{page.id}}">
+    <li><small>Title: {{page.header}}</small></li>
+      {{#if page.body }}
+        {{page.body}}
+      {{else}}
+        No description.
+      {{/if}}
+    </ul>
+{{/each}}

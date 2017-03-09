@@ -1,9 +1,14 @@
 'use strict';
 
+const showPageTemplate = require('../templates/page-listing.handlebars');
 // const showCommentsTemplate = require('../templates/comment-listing.handlebars');
 
 const indexPages = function (data) {
   console.log(data);
+  let showPagesHtml = showPageTemplate({ pages: data.pages });
+  console.log(showPageTemplate);
+  // selects the content element and appends new HTML into it
+  $('.log').append(showPagesHtml);
 };
 
 const showPage = function (data) {
