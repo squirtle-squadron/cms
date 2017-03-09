@@ -23,6 +23,18 @@ const onIndexPage = function (event) {
     .catch(ui.onShowError);
 };
 
+const onShowPage = function (event) {
+  event.preventDefault();
+  let pageId = $('#page-id').val();
+  if (pageId.length === 0){
+    console.log('No ID');
+  } else{
+      api.showPage(pageId)
+    .then(ui.showPage)
+    .catch(ui.onShowError);
+  }
+};
+
 const onDeletePage = function(event){
   event.preventDefault();
   api.destroyPage(+$(this).data('id'))
@@ -42,6 +54,6 @@ module.exports = {
   onUpdatePage,
   onCreatePage,
   onIndexPage,
-  // onShowPage,
+  onShowPage,
   onDeletePage,
 };
