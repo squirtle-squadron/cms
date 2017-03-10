@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://obscure-temple-20926.herokuapp.com/',
+    production: 'https://obscure-temple-20926.herokuapp.com',
     development: 'http://localhost:4741'
   },
 };
