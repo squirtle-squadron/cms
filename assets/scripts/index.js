@@ -10,9 +10,9 @@ const showPageStuff = require('./templates/page-crud.handlebars');
 const showBlogStuff = require('./templates/blog-crud.handlebars');
 
 $(document).ready(function () {
-  $('body').append(showNavbar);
-  $('.show-page').append(showPageStuff);
-  $('.show-blog').append(showBlogStuff);
+  $('.navbar-render').append(showNavbar);
+  $('.page-render').append(showPageStuff);
+  $('.blog-render').append(showBlogStuff);
 });
 
 $(() => {
