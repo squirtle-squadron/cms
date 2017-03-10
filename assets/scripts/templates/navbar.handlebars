@@ -1,0 +1,115 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+      <a class="navbar-brand">ScribbleBook</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active create-new-album" data-toggle="modal" data-target=".create-album-modal"><a href="#">Create Website</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Authorization <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li id="sign-up-dropdown" data-toggle="modal" data-target=".sign-up-modal"><a href="#">Sign Up</a></li>
+            <li id="change-password-dropdown" data-toggle="modal" data-target=".change-password-modal"><a href="#">Change Password</a></li>
+            <li role="separator" class="divider"></li>
+            <li class="dropdown-header"></li>
+            <li id="exit"><a href="#">Sign Out</a></li>
+            <li id="sign-in-dropdown" data-toggle="modal" data-target=".sign-in-modal"><a href="#">Sign In</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+    <!--/.nav-collapse -->
+  </div>
+</nav>
+
+<div class="top">
+  <div class="authentication">
+    <div class="modal fade sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <form id="sign-up">
+            <fieldset>
+              <legend>Sign up!</legend>
+              <label>
+                        Email
+                        <input type="text" name="credentials[email]">
+                      </label>
+              <label>
+                        password
+                        <input type="password" name="credentials[password]">
+                      </label>
+              <label>
+                        Password Confirmation
+                        <input type="password" name="credentials[password_confirmation]">
+                      </label>
+              <button type="submit" class="btn btn-default">Sign Up!</button>
+            </fieldset>
+          </form>
+          <div class="credential-status"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <form id="sign-in">
+            <fieldset>
+              <legend>Sign in!</legend>
+              <label>
+                        Email
+                        <input type="text" name="credentials[email]">
+                      </label>
+              <label>
+                        password
+                        <input type="password" name="credentials[password]">
+                      </label>
+              <button type="submit" class="btn btn-default">Sign In!</button>
+            </fieldset>
+          </form>
+          <div class="credential-status"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade change-password-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <form id="change-password">
+            <fieldset>
+              <legend>Change Password</legend>
+              <label>
+                        Email
+                        <input type="text" name="credentials[email]">
+                      </label>
+              <label>
+                        Old Password
+                        <input type="password" name="passwords[old]">
+                      </label>
+              <label>
+                        New Password
+                        <input type="password" name="passwords[new]">
+                      </label>
+              <button type="submit" class="btn btn-default">Change Password</button>
+            </fieldset>
+          </form>
+          <div class="credential-status"></div>
+        </div>
+      </div>
+    </div>
+
+    <form id="sign-out" class="hide">
+      <fieldset>
+        <input type="submit" name="submit" value="Sign Out!">
+      </fieldset>
+    </form>
