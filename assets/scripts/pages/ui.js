@@ -2,7 +2,7 @@
 
 const showPageTemplate = require('../templates/page-listing.handlebars');
 // const showCommentsTemplate = require('../templates/comment-listing.handlebars');
-const updatePage = require('../templates/update-page.handlebars')
+const updatePage = require('../templates/update-page.handlebars');
 
 const indexPages = function (data) {
   console.log(data);
@@ -34,9 +34,9 @@ const onError = function () {
 
 const onUpdateSuccess = function (info, pageId) {
   let showPages = updatePage({ page: info.page, pageId});
-$('.kapat').modal('hide');
+  $('.kapat').modal('hide');
  // $('[data-id ='+ pageId +']').replaceWith(showPages);
- $('[data-id ='+ pageId +']').replaceWith(showPages);
+  $('[data-id ='+ pageId +']').replaceWith(showPages);
 };
 
 const afterUpdateSuccess = function (info, pageId){

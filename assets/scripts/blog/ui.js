@@ -6,9 +6,7 @@ const indexBlogs = function (data) {
   console.log(data);
   let showBlogsHtml = showBlogTemplate({blogs: data.blogs});
   console.log(showBlogTemplate);
-
-$('.log').html(showBlogsHtml);
-
+  $('.log').html(showBlogsHtml);
 };
 
 const showBlog = function (data) {
@@ -32,11 +30,12 @@ const onError = function () {
 };
 
 const onUpdateSuccess = function () {
-
+  $('#blog-index').click();
+  $('.kapat').modal('hide');
 };
 
 const onDeleteSuccess = function () {
-
+  $('#blog-index').click();
 };
 
 const onCreateError = function() {

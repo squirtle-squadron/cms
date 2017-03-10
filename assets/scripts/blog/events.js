@@ -38,7 +38,7 @@ const onShowBlog = function (event) {
 const onDeleteBlog = function(event){
   event.preventDefault();
   let data = getFormFields(event.target);
-  api.destroyBlog(data)
+  api.destroyBlog(data, $(this).data('id'))
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
@@ -46,7 +46,7 @@ const onDeleteBlog = function(event){
 const onUpdateBlog = function(event){
   event.preventDefault();
   let info = getFormFields(event.target);
-  api.updateBlog(info)
+  api.updateBlog(info, $(this).data('id'))
     .then(ui.onUpdateSuccess)
     .catch(ui.onError);
 };

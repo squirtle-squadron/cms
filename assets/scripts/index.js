@@ -28,7 +28,9 @@ $(() => {
   $('.show-page').on('submit', pageEvents.onShowPage);
   $('.create-page').on('submit', pageEvents.onCreatePage);
   $('.log').on('submit', '.submit-update', pageEvents.onUpdatePage);
+  $('.log').on('submit', '.submit-blog-update', blogEvents.onUpdateBlog);
   $('.log').on('click','.remove' ,pageEvents.onDeletePage);
+  $('.log').on('click','.remove-blog' ,blogEvents.onDeleteBlog);
   blogEvents.addHandlers();
 });
 

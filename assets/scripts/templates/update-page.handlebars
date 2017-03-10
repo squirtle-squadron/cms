@@ -6,7 +6,7 @@
 
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{pageId}}">
-    Update!
+    Update Page!
   </button>
 
   <!-- Modal -->
@@ -19,6 +19,7 @@
         </div>
         <div class="modal-body">
           <form class="submit-update" data-id="{{pageId}}">
+              <textarea id="mytextarea">Hello, World!</textarea>
               <input type="text" name="page[header]" value="{{page.header}}" class="clean-update">
               <input type="text" name="page[body]" value="{{page.body}}" class="clean-update">
               <input type="submit" name="submit">
