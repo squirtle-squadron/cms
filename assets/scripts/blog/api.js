@@ -34,7 +34,7 @@ const showBlog = function (id) {
   });
 };
 
-const destroyBlog = function(data, id){
+const destroyBlog = function(id){
   return $.ajax({
     url: config.apiOrigin + '/blogs/' + id,
     headers: {

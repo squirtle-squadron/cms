@@ -37,8 +37,7 @@ const onShowBlog = function (event) {
 
 const onDeleteBlog = function(event){
   event.preventDefault();
-  let data = getFormFields(event.target);
-  api.destroyBlog(data, $(this).data('id'))
+  api.destroyBlog($(this).data('id'))
     .then(ui.onDeleteSuccess)
     .catch(ui.onError);
 };
