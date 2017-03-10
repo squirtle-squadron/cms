@@ -1,25 +1,26 @@
-This is the front end for the content management system group project.
-
-Links:
+# Scribble Book
+---
+# Links:
+---
 [Back-end Repo URL](https://github.com/squirtle-squadron/cms-api)
 [Deployed Front end URL](https://squirtle-squadron.github.io/cms/#)
-
-Description:
+---
+# Description:
   Our application is a both place for a user to create their own content blog
 about whatever they want. As well as if they're feeling a bit more adventurous
 they can make their own content page. The page is a little more content then the
 blog itself and allows for slightly more customization. However, it is still
 simple enough to allow a non technical user to create and customize. We have set
 some basic parameters they can use to change the display they way they like.
-
-Tech:
+---
+# Tech:
   The technologies we used included Express, Handlebars, Mongoose, MongoDB, Node
 html, scss, javascript, jquery, and bootstrap just to name a few. We utilized a
 combination of Express, Mongo, Mongoose, and Node to structure our back-end
 database and Html, Scss, Javascript, Handlebars, Jquery, and Bootstrap to
 structure the front-end.
-
-Approach:
+---
+# Approach:
   Coming into this project as a fresh to each other team, the first step we
 needed to take was getting to know each others wrok styles. We did this, becuase
 we quickly realized that this project was more then just our efforts as
@@ -51,3 +52,5 @@ make a definitive plan we broke up into teams of two again. We as teams broke up
 the ajax requests, the handlebars, and base html/css into two sections. Once
 each part was finished we came together as a team to discuss both sides and
 test them before we brought them together.
+---
+# User Stories:
