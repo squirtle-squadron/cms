@@ -1,9 +1,9 @@
 # Scribble Book
----
+
 # Links:
----
 [Back-end Repo URL](https://github.com/squirtle-squadron/cms-api)
 [Deployed Front end URL](https://squirtle-squadron.github.io/cms/#)
+
 ---
 # Description:
   Our application is a both place for a user to create their own content blog
@@ -12,6 +12,7 @@ they can make their own content page. The page is a little more content then the
 blog itself and allows for slightly more customization. However, it is still
 simple enough to allow a non technical user to create and customize. We have set
 some basic parameters they can use to change the display they way they like.
+
 ---
 # Tech:
   The technologies we used included Express, Handlebars, Mongoose, MongoDB, Node
@@ -19,6 +20,7 @@ html, scss, javascript, jquery, and bootstrap just to name a few. We utilized a
 combination of Express, Mongo, Mongoose, and Node to structure our back-end
 database and Html, Scss, Javascript, Handlebars, Jquery, and Bootstrap to
 structure the front-end.
+
 ---
 # Approach:
   Coming into this project as a fresh to each other team, the first step we
@@ -52,5 +54,30 @@ make a definitive plan we broke up into teams of two again. We as teams broke up
 the ajax requests, the handlebars, and base html/css into two sections. Once
 each part was finished we came together as a team to discuss both sides and
 test them before we brought them together.
+
+---
+# Major Hurdles and Unsolved Problems
+We ran into two major issues one was a [Git issue](https://github.com/ga-wdi-boston/team-project/issues/243) In this issue
+we had an problem with a merge conflict that eventually caused a bigger problem.
+This happened because two groups were working on the same file in different
+branches.
+The second major issue, was a back end deploy issue that revolved around a small
+typo that caused a way bigger problem. [404 issue](https://github.com/ga-wdi-boston/team-project/issues/250)
+
 ---
 # User Stories:
+As a user I want to be able to make an account and store information.
+As a user I want to be able to change my data.
+As a user I want to be able to sign in and out so that only I can edit my data.
+As a user I want to be able to post content to my blog, and share it.
+As a User I want to be able to post a new web page.
+As a user I want to be able to edit and delete my blogs and pages.
+As a user I want to be able to edit the html on my page.
+As a user I want to be able to find other peoples blogs.
+As a user I want to be able to add pictures and links to my page.
+
+---
+# ERD
+
+---
+# Wire Frames
