@@ -45,4 +45,9 @@ there, we broke into teams of two and each tackled a model. One was for our blog
 post and then the second was for our pages. Once that was done and working on
 the back-end, we moved forward to the front-end.
 
-  With the front end we broke it up a lot more. 
+  With the front end we broke it up a lot more. We started off programing as a
+group until we got a grasp of what were going to need. Once we were able to see
+make a definitive plan we broke up into teams of two again. We as teams broke up
+the ajax requests, the handlebars, and base html/css into two sections. Once
+each part was finished we came together as a team to discuss both sides and
+test them before we brought them together.
