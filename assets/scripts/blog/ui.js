@@ -23,6 +23,7 @@ const onShowError = function () {
 
 const onPostSuccess = function (data) {
   console.log(data);
+  $('.kapat').modal('hide');
 };
 
 const onError = function () {

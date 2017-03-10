@@ -1,17 +1,3 @@
-<!-- {{#each pages as |page|}}
-
-  {{log  this}}
-
-  <ul data-id="{{page.id}}">
-    <li><small>header: {{page.header}}</small></li>
-      {{#if page.body }}
-        {{page.body}}
-      {{else}}
-        No description.
-      {{/if}}
-    </ul>
-{{/each}} -->
-
 {{#each pages as |page|}}
 
 
@@ -38,7 +24,7 @@
              <form class="submit-update" data-id="{{page.id}}">
                  <input type="text" name="page[header]" value="{{page.header}}" class="clean-update">
                  <input type="text" name="page[body]" value="{{page.body}}" class="clean-update">
-                 <input type="submit" name="submit">
+                 <input type="submit" data-id="{{page.id}}" name="submit">
              </form>
              <div class="warning-update-data">
 
