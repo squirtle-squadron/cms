@@ -37,17 +37,21 @@ const onShowPage = function (event) {
 
 const onDeletePage = function(event){
   event.preventDefault();
-  let data = getFormFields(event.target);
-  api.destroyPage(data)
-    .then(ui.onDeleteSuccess)
+  let pageId = event.target.getAttribute('data-id');
+  console.log(pageId);
+  api.destroyPage(pageId)
+    .then(ui.onDeleteSuccess(pageId))
     .catch(ui.onError);
 };
 
 const onUpdatePage = function(event){
   event.preventDefault();
+  let pageId = event.target.getAttribute('data-id');
+
   let info = getFormFields(event.target);
-  api.updatePage(info)
-    .then(ui.onUpdateSuccess)
+  api.updatePage(info,pageId)
+    .then(ui.onUpdateSuccess(info, pageId))
+    .then(ui.afterUpdateSuccess(info, pageId))
     .catch(ui.onError);
 };
 

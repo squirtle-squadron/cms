@@ -2,13 +2,14 @@
 
 const showPageTemplate = require('../templates/page-listing.handlebars');
 // const showCommentsTemplate = require('../templates/comment-listing.handlebars');
+const updatePage = require('../templates/update-page.handlebars')
 
 const indexPages = function (data) {
   console.log(data);
   let showPagesHtml = showPageTemplate({ pages: data.pages });
   console.log(showPageTemplate);
   // selects the content element and appends new HTML into it
-  $('.log').append(showPagesHtml);
+  $('.log').html(showPagesHtml);
 };
 
 const showPage = function (data) {
@@ -31,12 +32,22 @@ const onError = function () {
 
 };
 
-const onUpdateSuccess = function () {
-
+const onUpdateSuccess = function (info, pageId) {
+  let showPages = updatePage({ page: info.page, pageId});
+$('.kapat').modal('hide');
+ // $('[data-id ='+ pageId +']').replaceWith(showPages);
+ $('[data-id ='+ pageId +']').replaceWith(showPages);
 };
 
-const onDeleteSuccess = function () {
+const afterUpdateSuccess = function (info, pageId){
+  let showPages = updatePage({ page: info.page, pageId});
+  $('[data-id ='+ pageId +']').replaceWith(showPages);
+};
 
+
+
+const onDeleteSuccess = function (pageId) {
+  $('[data-id ='+ pageId +']').remove();
 };
 
 const onCreateError = function() {
@@ -55,4 +66,5 @@ module.exports = {
   onUpdateSuccess,
   onDeleteSuccess,
   onCreateError,
+  afterUpdateSuccess
 };

@@ -1,0 +1,39 @@
+<div class="jumbotron" data-id="{{pageId}}">
+  <h3>Page</h3>
+  <p>{{page.header}}</p>
+  <h3>content</h3>
+  <p>{{page.body}}</p>
+
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{pageId}}">
+    Update!
+  </button>
+
+  <!-- Modal -->
+  <div class="modal kapat" id="mod{{pageId}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-header" id="myModalLabel">Update!</h4>
+        </div>
+        <div class="modal-body">
+          <form class="submit-update" data-id="{{pageId}}">
+              <input type="text" name="page[header]" value="{{page.header}}" class="clean-update">
+              <input type="text" name="page[body]" value="{{page.body}}" class="clean-update">
+              <input type="submit" name="submit">
+          </form>
+          <div class="warning-update-data">
+
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <button type="button" name="button" class="btn btn-default remove" data-id="{{pageId}}">Remove</button>
+</div>
