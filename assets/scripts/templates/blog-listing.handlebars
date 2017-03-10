@@ -1,13 +1,44 @@
 {{#each blogs as |blog|}}
 
-  {{log  this}}
 
-  <ul data-id="{{blog.id}}">
-    <li><small>Title: {{blog.title}}</small></li>
-      {{#if blog.content }}
-        {{blog.content}}
-      {{else}}
-        No description.
-      {{/if}}
-    </ul>
+   <div class="jumbotron" data-id="{{blog.id}}">
+     <h3>Blog</h3>
+     <p>{{blog.title}}</p>
+     <h3>content</h3>
+     <p>{{blog.content}}</p>
+
+     <!-- Button trigger modal -->
+     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{blog.id}}">
+       Update!
+     </button>
+
+     <!-- Modal -->
+     <div class="modal kapat" id="mod{{blog.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+       <div class="modal-dialog" role="document">
+         <div class="modal-content">
+           <div class="modal-header">
+             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+             <h4 class="modal-header" id="myModalLabel">Update!</h4>
+           </div>
+           <div class="modal-body">
+             <form class="submit-blog-update" data-id="{{blog.id}}">
+                 <input type="text" name="blog[title]" value="{{blog.title}}" class="clean-update">
+                 <input type="text" name="blog[content]" value="{{blog.content}}" class="clean-update">
+                 <input type="submit" data-id="{{blog.id}}" name="submit">
+             </form>
+             <div class="warning-update-data">
+
+             </div>
+           </div>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+     <button type="button" name="button" class="btn btn-default remove-blog" data-id="{{blog.id}}">Remove</button>
+   </div>
+
 {{/each}}

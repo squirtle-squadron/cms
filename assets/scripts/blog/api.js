@@ -34,9 +34,9 @@ const showBlog = function (id) {
   });
 };
 
-const destroyBlog = function(data){
+const destroyBlog = function(data, id){
   return $.ajax({
-    url: config.apiOrigin + '/blogs/' + data.blog.id,
+    url: config.apiOrigin + '/blogs/' + id,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -44,9 +44,9 @@ const destroyBlog = function(data){
   });
 };
 
-const updateBlog = function(data) {
+const updateBlog = function(data, id) {
   return $.ajax({
-    url: config.apiOrigin + '/blogs/' + data.blog.id,
+    url: config.apiOrigin + '/blogs/' + id,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,
