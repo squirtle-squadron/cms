@@ -5,6 +5,15 @@ const config = require('./config');
 const pageEvents = require('./pages/events');
 const handlers = require('./auth/events');
 const blogEvents = require('./blog/events');
+const showNavbar = require('./templates/navbar.handlebars');
+const showPageStuff = require('./templates/page-crud.handlebars');
+const showBlogStuff = require('./templates/blog-crud.handlebars');
+
+$(document).ready(function () {
+  $('.navbar-render').append(showNavbar);
+  $('.page-render').append(showPageStuff);
+  $('.blog-render').append(showBlogStuff);
+});
 
 $(() => {
   setAPIOrigin(location, config);
