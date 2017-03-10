@@ -23,14 +23,11 @@ const onSignUp = function (event) {
   let data = getFormFields(event.target);
   api.signUp(data)
   .then(()=> {
-    onSignIn(event, data)
-    .then((response) => {
-          store.user = response.user;
-          return store.user;
-  })
-    .then(ui.signUpSuccess)
-    .catch(ui.signUpFailure);
-});
+    onSignIn(event, data);
+
+})
+  .then(ui.signUpSuccess)
+  .catch(ui.signUpFailure);
 };
 
 
