@@ -2,6 +2,7 @@
 
 const showPageTemplate = require('../templates/page-listing.handlebars');
 // const showCommentsTemplate = require('../templates/comment-listing.handlebars');
+const showSinglePage = require('../templates/show-page.handlebars');
 
 const indexPages = function (data) {
   let showPagesHtml = showPageTemplate({ pages: data.pages });
@@ -11,6 +12,12 @@ const indexPages = function (data) {
 
 const showPage = function (data) {
   console.log(data);
+};
+
+const singlePage = function (data){
+  let showPagesHtml = showSinglePage({ page: data.page });
+  // selects the content element and appends new HTML into it
+  $('.log').html(showPagesHtml);
 };
 
 const showSuccess = function () {
@@ -60,5 +67,6 @@ module.exports = {
   onUpdateSuccess,
   onDeleteSuccess,
   onCreateError,
-  afterUpdateSuccess
+  afterUpdateSuccess,
+  singlePage
 };
