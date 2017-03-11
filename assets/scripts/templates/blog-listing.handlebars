@@ -5,6 +5,7 @@
      <h3>{{blog.title}}</h3>
      <p>{{blog.content}}</p>
      <footer>{{blog.author}}</footer>
+     <p>{{blog.updatedAt}}</p>
 
      <!-- Button trigger modal -->
      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{blog.id}}">
@@ -23,7 +24,7 @@
              <form class="submit-blog-update" data-id="{{blog.id}}">
                  <input type="text" name="blog[title]" value="{{blog.title}}" class="clean-update">
                  <textarea type="text" name="blog[content]" class="clean-update">{{blog.content}}</textarea>
-                <input type="text" name="blog[author]" value="{{blog.author}}">
+                 <input type="text" name="blog[author]" value="{{blog.author}}">
                  <input type="submit" data-id="{{blog.id}}" name="submit">
              </form>
              <div class="warning-update-data">

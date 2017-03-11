@@ -3,9 +3,9 @@ const showBlogTemplate = require('../templates/blog-listing.handlebars');
 // const showCommentsTemplate = require('../templates/comment-listing.handlebars');
 
 const indexBlogs = function (data) {
-  console.log(data);
+  // data.blog.updatedAt = data.blog.updatedAt.split('T')[0];
+  console.log(data.blogs[1].updatedAt.split('T')[0]);
   let showBlogsHtml = showBlogTemplate({blogs: data.blogs});
-  console.log(showBlogTemplate);
   $('.log').html(showBlogsHtml);
 };
 
@@ -18,7 +18,7 @@ const showSuccess = function () {
 };
 
 const onShowError = function () {
-  $('.log').text('This blog does not exsist');
+
 };
 
 const onPostSuccess = function (data) {
@@ -40,7 +40,7 @@ const onDeleteSuccess = function () {
 };
 
 const onCreateError = function() {
-  console.log('No Bueno...');
+
 };
 
 
