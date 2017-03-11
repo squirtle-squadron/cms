@@ -2,10 +2,9 @@
 
 
    <div class="jumbotron" data-id="{{blog.id}}">
-     <h3>Blog</h3>
-     <p>{{blog.title}}</p>
-     <h3>content</h3>
+     <h3>{{blog.title}}</h3>
      <p>{{blog.content}}</p>
+     <footer>{{blog.author}}</footer>
 
      <!-- Button trigger modal -->
      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{blog.id}}">
@@ -23,7 +22,8 @@
            <div class="modal-body">
              <form class="submit-blog-update" data-id="{{blog.id}}">
                  <input type="text" name="blog[title]" value="{{blog.title}}" class="clean-update">
-                 <input type="text" name="blog[content]" value="{{blog.content}}" class="clean-update">
+                 <textarea type="text" name="blog[content]" class="clean-update">{{blog.content}}</textarea>
+                <input type="text" name="blog[author]" value="{{blog.author}}">
                  <input type="submit" data-id="{{blog.id}}" name="submit">
              </form>
              <div class="warning-update-data">
