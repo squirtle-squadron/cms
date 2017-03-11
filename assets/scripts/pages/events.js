@@ -24,21 +24,18 @@ const onIndexPage = function (event) {
 };
 
 const onShowPage = function (event) {
-  event.preventDefault();
-  let pageId = $('#page-id').val();
-  if (pageId.length === 0){
-    console.log('No ID');
-  } else{
-      api.showPage(pageId)
-    .then(ui.showPage)
-    .catch(ui.onShowError);
-  }
+  // event.preventDefault();
+  //   api.showPage($(this).data('id'))
+  //   .then(ui.showPage)
+  //   .catch(ui.onShowError);
+
 };
 
 const onShowSinglePage = function(event){
   event.preventDefault();
-  let pageId = $('#page-id').val();
-  ui.singlePage(pageId);
+    api.showPage($(this).data('id'))
+    .then(ui.singlePage)
+    .catch(ui.onShowError);
 };
 
 const onDeletePage = function(event){
