@@ -2,10 +2,9 @@
 
 
    <div class="jumbotron" data-id="{{page.id}}">
-     <h3>Page</h3>
-     <p>{{page.header}}</p>
-     <h3>content</h3>
+     <h3>{{page.header}}</h3>
      <p>{{page.body}}</p>
+     <footer>{{page.footer}}</footer>
 
      <!-- Button trigger modal -->
      <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{page.id}}">
@@ -23,7 +22,8 @@
            <div class="modal-body">
              <form class="submit-update" data-id="{{page.id}}">
                  <input type="text" name="page[header]" value="{{page.header}}" class="clean-update">
-                 <input type="text" name="page[body]" value="{{page.body}}" class="clean-update">
+                 <textarea type="text" name="page[body]" class="clean-update">{{page.body}}</textarea>
+                 <input type="text" name="page[footer]" placeholder="Enter Footer">
                  <input type="submit" data-id="{{page.id}}" name="submit">
              </form>
              <div class="warning-update-data">
