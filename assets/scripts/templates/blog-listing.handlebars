@@ -7,7 +7,8 @@
      <footer>{{blog.author}}</footer>
 
      <!-- Button trigger modal -->
-     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{blog.id}}">
+     <!-- Update button -->
+     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{blog.id}}" id="update-button">
        Update!
      </button>
 
@@ -37,8 +38,8 @@
        </div>
      </div>
 
-
-     <button type="button" name="button" class="btn btn-default remove-blog" data-id="{{blog.id}}">Remove</button>
+<!--remove blog button  -->
+     <button type="button" name="button" class="btn btn-default" data-id="{{blog.id}}" id="delete-button">Remove</button>
    </div>
 
 {{/each}}

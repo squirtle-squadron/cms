@@ -3,17 +3,19 @@
 $('.log').text('');
 
 const signInSuccess = () => {
-  $('.log').text('Create or Edit an Album');
   $('.new').show();
   $('#sign-in-dropdown').hide();
   $('#sign-up-dropdown').hide();
   $('#exit').show();
   $('#change-password-dropdown').show();
   $('.sign-in-modal').modal('hide');
-  $(".show-all-albums").click();
-  $('.create-new-album').show();
   $('input').val('');
   $('.credential-status').text('');
+  $('#create-blog').removeClass('hidden');
+  $('#create-page-button').removeClass('hidden');
+  $('#page-index').removeClass('hidden');
+  $(".jumbotron").first('#update-button').removeClass('hidden');
+  $('.but-hole').show();
 };
 
 const signInFailure = () => {
