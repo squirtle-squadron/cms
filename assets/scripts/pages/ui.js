@@ -21,8 +21,7 @@ const onShowError = function () {
   $('.log').text('This page does not exsist');
 };
 
-const onPostSuccess = function (data) {
-  console.log(data);
+const onPostSuccess = function () {
   $('.kapat').modal('hide');
 };
 
