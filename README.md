@@ -5,6 +5,11 @@
 [Deployed Front end URL](https://squirtle-squadron.github.io/cms/#)
 
 ---
+# Directions:
+ 1) Fork and Clone repository
+ 2) Npm install for dependencies
+
+---
 # Description:
   Our application is a both place for a user to create their own content blog
 about whatever they want. As well as if they're feeling a bit more adventurous
@@ -78,6 +83,9 @@ As a user I want to be able to add pictures and links to my page.
 
 ---
 # ERD
+[ERDs](http://imgur.com/a/8zRD2)
 
 ---
 # Wire Frames
+
+[Wire Frames](http://novakw267.imgur.com/all/)
