@@ -18,7 +18,7 @@ const singlePage = function (data){
   // console.log(data);
   let showPagesHtml = showSinglePage({ page: data.page });
   // selects the content element and appends new HTML into it
-    $('.kapat').modal('hide')
+  $('.kapat').modal('hide');
   $('.log').html(showPagesHtml);
 };
 
@@ -33,6 +33,7 @@ const onShowError = function () {
 
 const onPostSuccess = function () {
   $('.kapat').modal('hide');
+  $('#page-index').click();
 };
 
 const onError = function () {
