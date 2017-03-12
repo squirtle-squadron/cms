@@ -26,7 +26,7 @@ const onIndexBlog = function (event) {
 const onIndexBlogSignedIn = function (event) {
   event.preventDefault();
   let data = event;
-    api.indexBlogs(data)
+    api.indexBlogsSignedIn(data)
     .then(ui.indexBlogsSignedIn)
     .catch(ui.onShowError);
 };
