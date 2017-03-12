@@ -35,6 +35,13 @@ const onShowPage = function (event) {
   }
 };
 
+const onShowSinglePage = function(event){
+  event.preventDefault();
+    api.showPage($(this).data('id'))
+    .then(ui.singlePage)
+    .catch(ui.onShowError);
+};
+
 const onDeletePage = function(event){
   event.preventDefault();
   api.destroyPage($(this).data('id'))
@@ -57,4 +64,5 @@ module.exports = {
   onIndexPage,
   onShowPage,
   onDeletePage,
+  onShowSinglePage
 };

@@ -25,7 +25,10 @@
                  <textarea type="text" name="page[body]" class="clean-update">{{page.body}}</textarea>
                  <input type="text" name="page[footer]" placeholder="Enter Footer">
                  <input type="submit" data-id="{{page.id}}" name="submit">
+
              </form>
+
+
              <div class="warning-update-data">
 
              </div>
@@ -36,9 +39,11 @@
          </div>
        </div>
      </div>
-
-
      <button type="button" name="button" class="btn btn-default remove" data-id="{{page.id}}">Remove</button>
+     <button type="button" name="button" class="btn btn-default shows-page" data-id="{{page.id}}">Show</button>
+
+
+
    </div>
 
 {{/each}}

@@ -2,6 +2,7 @@
 
 const showPageTemplate = require('../templates/page-listing.handlebars');
 // const showCommentsTemplate = require('../templates/comment-listing.handlebars');
+const showSinglePage = require('../templates/show-page.handlebars');
 
 const indexPages = function (data) {
   let showPagesHtml = showPageTemplate({ pages: data.pages });
@@ -13,12 +14,21 @@ const showPage = function (data) {
   console.log(data);
 };
 
+const singlePage = function (data){
+  // console.log(data);
+  let showPagesHtml = showSinglePage({ page: data.page });
+  // selects the content element and appends new HTML into it
+    $('.kapat').modal('hide')
+  $('.log').html(showPagesHtml);
+};
+
 const showSuccess = function () {
 
 };
 
 const onShowError = function () {
-  $('.log').text('This page does not exsist');
+  // $('.log').text('This page does not exsist');
+  console.log("error");
 };
 
 const onPostSuccess = function () {
@@ -26,7 +36,7 @@ const onPostSuccess = function () {
 };
 
 const onError = function () {
-
+  console.log("error");
 };
 
 const onUpdateSuccess = function () {
@@ -42,6 +52,7 @@ const afterUpdateSuccess = function (){
 
 const onDeleteSuccess = function () {
   $('#page-index').click();
+  $('.kapat').modal('hide');
 };
 
 const onCreateError = function() {
@@ -60,5 +71,6 @@ module.exports = {
   onUpdateSuccess,
   onDeleteSuccess,
   onCreateError,
-  afterUpdateSuccess
+  afterUpdateSuccess,
+  singlePage
 };

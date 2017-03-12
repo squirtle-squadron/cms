@@ -20,7 +20,7 @@ const onIndexBlog = function (event) {
   let data = event;
     api.indexBlogs(data)
     .then(ui.indexBlogs)
-    .catch(ui.onShowError);
+    .catch(ui.onShowError());
 };
 
 const onShowBlog = function (event) {
