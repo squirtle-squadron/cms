@@ -14,6 +14,11 @@ h1 {
   font-family: $title-font;
 }
 
+.jumbotron {
+  background-color: $light-green;
+    color: $slate-gray;
+}
+
 
 body {
   background-color: $slate-gray;
@@ -41,11 +46,20 @@ body {
   background-color: $salmon;
 };
 
-.modal-body {
-  width: 30%;
-}
-
 label {
   color: $dark-gray;
   font-family: $body-font;
+}
+
+input,
+textarea {
+  background-color: $ocean-blue;
+}
+
+.modal-body,
+.modal-dialog,
+.modal-header,
+fieldset,
+legend {
+  background-color: $salmon;
 }
