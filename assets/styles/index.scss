@@ -9,10 +9,36 @@ html {
   padding: 0;
 }
 
+h1 {
+  font-family: 'Shadows Into Light', cursive;
+}
+
 body {
-  background-color: $pale-aqua;
+  background-color: $dark-blue;
+  color: $sunset;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .navbar {
-  background-color: $prussian-blue;
+  background-color: $purpleg;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+
+.btn {
+  background-color: $sea-blue;
+  color: $white;
+}
+
+.btn:hover {
+  background-color: $pale-aqua;
+}
+
+.modal-dialog {
+  background-color: $salmon;
+};
+
+.modal-body {
+  width: 30%;
+
 }

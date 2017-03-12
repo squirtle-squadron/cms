@@ -18,7 +18,6 @@ $(() => {
   $('#change-password-dropdown').hide();
   $('#exit').hide();
   $('.create-new-album').hide();
-  $('.log').text('Sign In or Sign Up');
   $('#exit').on('click', function () {
     $('#sign-out').submit();
   });
