@@ -4,19 +4,17 @@ const showBlogSignedIn = require('../templates/blog-listing-signed-in.handlebars
 
 
 const indexBlogs = function (data) {
-  // data.blog.updatedAt = data.blog.updatedAt.split('T')[0];
   let showBlogsHtml = showBlogTemplate({blogs: data.blogs});
   $('.log').html(showBlogsHtml);
 };
 
 const indexBlogsSignedIn = function (data) {
-  // data.blog.updatedAt = data.blog.updatedAt.split('T')[0];
   let showBlogsHtml = showBlogSignedIn({blogs: data.blogs});
   $('.log').html(showBlogsHtml);
 };
 
-const showBlog = function (data) {
-  console.log(data);
+const showBlog = function () {
+
 };
 
 const showSuccess = function () {
@@ -28,8 +26,13 @@ const onShowError = function () {
 };
 
 const onPostSuccess = function () {
+  alertify.success('Blog Successfully Created!');
   $('.blog-render').find('.sign-in-show').click();
   $('.kapat').modal('hide');
+};
+
+const onCreateError = function() {
+  alertify.error('Please fill out all the fields!');
 };
 
 const onError = function () {
@@ -37,17 +40,16 @@ const onError = function () {
 };
 
 const onUpdateSuccess = function () {
+  alertify.success('Blog Successfully Updated!');
   $('.blog-render').find('.sign-in-show').click();
   $('.kapat').modal('hide');
 };
 
 const onDeleteSuccess = function () {
+  alertify.success('Blog Successfully Deleted');
   $('.sign-in-show').click();
 };
 
-const onCreateError = function() {
-
-};
 
 
 

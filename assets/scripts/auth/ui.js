@@ -7,6 +7,7 @@ const pageEvents = require('../page/events');
 const showPageStuff = require('../templates/page-crud.handlebars');
 
 const signInSuccess = () => {
+  alertify.success('Sign-in Succesful!');
   $('.blog-render').on('click', '.sign-in-show', blogEvents.onIndexBlogSignedIn);
   $('.page-render').on('click', '#page-index', pageEvents.onIndexPage);
   $('#sign-in-dropdown').hide();
@@ -23,31 +24,33 @@ const signInSuccess = () => {
 };
 
 const signInFailure = () => {
-  $('.log').text('Please enter a valid username and password');
+  alertify.error('Please enter a valid username and password');
 };
 
 const signUpSuccess = () => {
+  alertify.success('Sign-up Succesful. You are now signed in!');
   $('.log').text('Welcome! Please Sign In!');
   $('.sign-up-modal').modal('hide');
   $('input').val('');
 };
 
 const signUpFailure = () => {
-  $('.log').text('Please enter a valid username (e.g. name@name) and password (must be 4 or more characters)');
+  alertify.error('Please enter a valid username (e.g. name@name) and password (must be 4 or more characters)');
 };
 
 const changePasswordSuccess = () => {
-  $('.log').text('Password Successfully Changed');
+  alertify.success('Password Successfully Changed');
   $('.change-password-modal').modal('hide');
   $('input').val('');
 
 };
 
 const passwordChangeFailure = () => {
-  $('.log').text('Please Try Again');
+  alertify.error('Please Try Again');
 };
 
 const signOutSuccess = () => {
+alertify.success('Sign Out Complete!');
   $('.blog-render').on('click', '#blog-index', blogEvents.onIndexBlog);
   $('.log').text('Successfully Signed Out');
   $('.content').fadeOut();

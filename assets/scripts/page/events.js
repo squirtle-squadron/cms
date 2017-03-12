@@ -11,7 +11,7 @@ const onCreatePage = function (event) {
   api.createPage(data)
   .then((response) => {
     store.page = response.page;
-    ui.onPostSuccess(response.page);
+    ui.onCreateSuccess(response.page);
   }).catch(ui.onCreateError);
 };
 
@@ -27,7 +27,7 @@ const onShowPage = function (event) {
   event.preventDefault();
   let pageId = $('#page-id').val();
   if (pageId.length === 0){
-    console.log('No ID');
+    // console.log('No ID');
   } else{
       api.showPage(pageId)
     .then(ui.showPage)
@@ -46,7 +46,7 @@ const onDeletePage = function(event){
   event.preventDefault();
   api.destroyPage($(this).data('id'))
     .then(ui.onDeleteSuccess())
-    .catch(ui.onError);
+    .catch(ui.onDeleteError);
 };
 
 const onUpdatePage = function(event){
@@ -55,7 +55,7 @@ const onUpdatePage = function(event){
   let info = getFormFields(event.target);
   api.updatePage(info, $(this).data('id'))
     .then(ui.onUpdateSuccess)
-    .catch(ui.onError);
+    .catch(ui.onUpdateError);
 };
 
 module.exports = {
