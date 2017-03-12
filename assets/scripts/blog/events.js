@@ -4,6 +4,7 @@ const api = require('./api.js');
 const ui = require('./ui.js');
 const store = require('../store');
 const getFormFields = require('../../../lib/get-form-fields');
+const emp = require('../emptyness.js');
 
 const onCreateBlog = function (event) {
   event.preventDefault();
@@ -53,9 +54,14 @@ const onDeleteBlog = function(event){
 const onUpdateBlog = function(event){
   event.preventDefault();
   let info = getFormFields(event.target);
-  api.updateBlog(info, $(this).data('id'))
-    .then(ui.onUpdateSuccess)
-    .catch(ui.onError);
+  if(emp.isBlank(info.blog.content) || info.blog.content.length === 1005){
+    alertify.error("Please Write A Content")
+  } else{
+    api.updateBlog(info, $(this).data('id'))
+      .then(ui.onUpdateSuccess)
+      .catch(ui.onError);
+  }
+
 };
 
 const addHandlers = () => {
