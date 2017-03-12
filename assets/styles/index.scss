@@ -1,6 +1,7 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'colors';
+@import 'typography';
 
 
 html {
@@ -10,13 +11,13 @@ html {
 }
 
 h1 {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: $title-font;
 }
 
 body {
   background-color: $dark-blue;
   color: $sunset;
-  font-family: 'Open Sans', sans-serif;
+  font-family: $body-font;
 }
 
 .navbar {
