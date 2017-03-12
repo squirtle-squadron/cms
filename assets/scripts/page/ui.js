@@ -33,24 +33,24 @@ const onShowError = function () {
 };
 
 const onCreateSuccess = function () {
-  alertify.success('Page Successfully Created!')
+  alertify.success('Page Successfully Created!');
   $('.kapat').modal('hide');
   $('#page-index').click();
 };
 
 const onCreateError = function() {
-  alertify.error('Please fill out all fields!')
+  alertify.error('Please fill out all fields!');
 };
 
 
 const onUpdateSuccess = function () {
-  alertify.success('Page Updated Successfully!')
+  alertify.success('Page Updated Successfully!');
   $('#page-index').click();
   $('.kapat').modal('hide');
 };
 
 const onUpdateError = function () {
-  alertify.error('Please fill out all Fields!')
+  alertify.error('Please fill out all Fields!');
 };
 
 
