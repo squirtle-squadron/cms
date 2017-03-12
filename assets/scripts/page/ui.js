@@ -36,6 +36,7 @@ const onCreateSuccess = function () {
   alertify.success('Page Successfully Created!');
   $('.kapat').modal('hide');
   $('#page-index').click();
+  $('input, textarea').val('');
 };
 
 const onCreateError = function() {
@@ -47,6 +48,7 @@ const onUpdateSuccess = function () {
   alertify.success('Page Updated Successfully!');
   $('#page-index').click();
   $('.kapat').modal('hide');
+  $('input, textarea').val('');
 };
 
 const onUpdateError = function () {

@@ -16,7 +16,6 @@ const signInSuccess = () => {
   $('#change-password-dropdown').show();
   $('.sign-in-modal').modal('hide');
   $('input').val('');
-  $('.homepage-blog-index').hide();
   $('.blog-render').append(showBlogSignIn);
   $('.page-render').append(showPageStuff);
   $('.log').empty();
