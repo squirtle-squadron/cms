@@ -5,9 +5,14 @@ const showPageTemplate = require('../templates/page-listing.handlebars');
 const showSinglePage = require('../templates/show-page.handlebars');
 
 const indexPages = function (data) {
+  for (let i = 0; i < data.pages.length; i++) {
+    let content = data.pages[i].body;
+    data.pages[i].body = content.replace(/\n/g, '\n');
+    console.log(typeof content);
+}
   let showPagesHtml = showPageTemplate({ pages: data.pages });
-  // selects the content element and appends new HTML into it
-  $('.log').html(showPagesHtml);
+    // selects the content element and appends new HTML into it
+    $('.log').html(showPagesHtml);
 };
 
 const showPage = function (data) {
@@ -18,7 +23,7 @@ const singlePage = function (data){
   // console.log(data);
   let showPagesHtml = showSinglePage({ page: data.page });
   // selects the content element and appends new HTML into it
-    $('.kapat').modal('hide')
+  $('.kapat').modal('hide');
   $('.log').html(showPagesHtml);
 };
 
@@ -33,6 +38,7 @@ const onShowError = function () {
 
 const onPostSuccess = function () {
   $('.kapat').modal('hide');
+  $('#page-index').click();
 };
 
 const onError = function () {

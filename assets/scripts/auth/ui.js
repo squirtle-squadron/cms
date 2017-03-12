@@ -1,10 +1,14 @@
 'use strict';
 
 const showBlogSignIn = require('../templates/blog-crud-signed-in.handlebars');
+const showBlogUI = require('../templates/blog-crud.handlebars');
 const blogEvents = require('../blog/events');
+const pageEvents = require('../page/events');
+const showPageStuff = require('../templates/page-crud.handlebars');
 
 const signInSuccess = () => {
   $('.blog-render').on('click', '.sign-in-show', blogEvents.onIndexBlogSignedIn);
+  $('.page-render').on('click', '#page-index', pageEvents.onIndexPage);
   $('#sign-in-dropdown').hide();
   $('#sign-up-dropdown').hide();
   $('#exit').show();
@@ -13,6 +17,9 @@ const signInSuccess = () => {
   $('input').val('');
   $('.homepage-blog-index').hide();
   $('.blog-render').append(showBlogSignIn);
+  $('.page-render').append(showPageStuff);
+  $('.log').empty();
+
 };
 
 const signInFailure = () => {
@@ -41,12 +48,16 @@ const passwordChangeFailure = () => {
 };
 
 const signOutSuccess = () => {
+  $('.blog-render').on('click', '#blog-index', blogEvents.onIndexBlog);
   $('.log').text('Successfully Signed Out');
   $('.content').fadeOut();
   $('#change-password-dropdown').hide();
   $('#exit').hide();
   $('#sign-in-dropdown').show();
   $('#sign-up-dropdown').show();
+  $('.blog-render').empty();
+  $('.blog-render').append(showBlogUI);
+  $('.page-render').empty();
 
 };
 

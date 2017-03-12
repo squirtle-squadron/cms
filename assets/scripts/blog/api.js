@@ -24,6 +24,16 @@ const indexBlogs = function () {
   });
 };
 
+const indexBlogsSignedIn = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/userblogs',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'GET',
+  });
+};
+
 const showBlog = function (id) {
   return $.ajax({
     url: config.apiOrigin + '/blogs/' + id,
@@ -60,5 +70,6 @@ module.exports = {
   showBlog,
   indexBlogs,
   destroyBlog,
-  updateBlog
+  updateBlog,
+  indexBlogsSignedIn
 };

@@ -5,7 +5,6 @@ const showBlogSignedIn = require('../templates/blog-listing-signed-in.handlebars
 
 const indexBlogs = function (data) {
   // data.blog.updatedAt = data.blog.updatedAt.split('T')[0];
-  console.log(data.blogs[1].updatedAt.split('T')[0]);
   let showBlogsHtml = showBlogTemplate({blogs: data.blogs});
   $('.log').html(showBlogsHtml);
 };
@@ -28,8 +27,8 @@ const onShowError = function () {
 
 };
 
-const onPostSuccess = function (data) {
-  console.log(data);
+const onPostSuccess = function () {
+  $('.blog-render').find('.sign-in-show').click();
   $('.kapat').modal('hide');
 };
 
@@ -38,7 +37,7 @@ const onError = function () {
 };
 
 const onUpdateSuccess = function () {
-  $('.sign-in-show').click();
+  $('.blog-render').find('.sign-in-show').click();
   $('.kapat').modal('hide');
 };
 

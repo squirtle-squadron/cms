@@ -1,9 +1,10 @@
 {{#each pages as |page|}}
 
+  {{log  this}}
 
    <div class="jumbotron" data-id="{{page.id}}">
      <h3>{{page.header}}</h3>
-     <p>{{page.body}}</p>
+     <pre>{{page.body}}</pre>
      <footer>{{page.footer}}</footer>
 
      <!-- Button trigger modal -->

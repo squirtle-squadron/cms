@@ -2,16 +2,14 @@
 
 const setAPIOrigin = require('../../lib/set-api-origin');
 const config = require('./config');
-const pageEvents = require('./pages/events');
+const pageEvents = require('./page/events');
 const handlers = require('./auth/events');
 const blogEvents = require('./blog/events');
 const showNavbar = require('./templates/navbar.handlebars');
-const showPageStuff = require('./templates/page-crud.handlebars');
 const showBlogStuff = require('./templates/blog-crud.handlebars');
 
 $(document).ready(function () {
   $('.navbar-render').append(showNavbar);
-  $('.page-render').append(showPageStuff);
   $('.blog-render').append(showBlogStuff);
 });
 
@@ -24,10 +22,10 @@ $(() => {
   $('#exit').on('click', function () {
     $('#sign-out').submit();
   });
-  $('#page-index').on('click', pageEvents.onIndexPage);
+  $('.page-render').on('click', '#page-index', pageEvents.onIndexPage);
   $('.log').on('click','.shows-page', pageEvents.onShowSinglePage);
   // $('.show-page').on('submit', pageEvents.onShowPage);
-  $('.create-page').on('submit', pageEvents.onCreatePage);
+  $('.page-render').on('submit', '.create-page', pageEvents.onCreatePage);
   $('.log').on('submit', '.submit-update', pageEvents.onUpdatePage);
   $('.log').on('submit', '.submit-blog-update', blogEvents.onUpdateBlog);
   $('.log').on('click','.remove' ,pageEvents.onDeletePage);
