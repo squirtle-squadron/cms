@@ -38,12 +38,12 @@ const onError = function () {
 };
 
 const onUpdateSuccess = function () {
-  $('#blog-index').click();
+  $('.sign-in-show').click();
   $('.kapat').modal('hide');
 };
 
 const onDeleteSuccess = function () {
-  $('#blog-index').click();
+  $('.sign-in-show').click();
 };
 
 const onCreateError = function() {

@@ -62,7 +62,7 @@ const addHandlers = () => {
   $('#blog-index').on('click', onIndexBlog);
   $('.poop').on('click', onIndexBlogSignedIn);
   $('.show-blog').on('submit', onShowBlog);
-  $('.create-blog').on('submit', onCreateBlog);
+  $('.blog-render').on('submit','.create-blog', onCreateBlog);
   $('#update-blog').on('submit', onUpdateBlog);
   $('.delete-blog').on('submit', onDeleteBlog);
 };
