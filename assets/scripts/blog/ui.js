@@ -27,8 +27,8 @@ const onShowError = function () {
 
 };
 
-const onPostSuccess = function (data) {
-  console.log(data);
+const onPostSuccess = function () {
+  $('.blog-render').find('.sign-in-show').click();
   $('.kapat').modal('hide');
 };
 
@@ -37,7 +37,7 @@ const onError = function () {
 };
 
 const onUpdateSuccess = function () {
-  $('.sign-in-show').click();
+  $('.blog-render').find('.sign-in-show').click();
   $('.kapat').modal('hide');
 };
 

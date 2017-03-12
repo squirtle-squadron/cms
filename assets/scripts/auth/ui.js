@@ -1,6 +1,7 @@
 'use strict';
 
 const showBlogSignIn = require('../templates/blog-crud-signed-in.handlebars');
+const showBlogUI = require('../templates/blog-crud.handlebars');
 const blogEvents = require('../blog/events');
 
 const signInSuccess = () => {
@@ -13,6 +14,7 @@ const signInSuccess = () => {
   $('input').val('');
   $('.homepage-blog-index').hide();
   $('.blog-render').append(showBlogSignIn);
+  $('.log').empty();
 };
 
 const signInFailure = () => {
@@ -41,12 +43,15 @@ const passwordChangeFailure = () => {
 };
 
 const signOutSuccess = () => {
+  $('.blog-render').on('click', '#blog-index', blogEvents.onIndexBlog);
   $('.log').text('Successfully Signed Out');
   $('.content').fadeOut();
   $('#change-password-dropdown').hide();
   $('#exit').hide();
   $('#sign-in-dropdown').show();
   $('#sign-up-dropdown').show();
+  $('.blog-render').empty();
+  $('.blog-render').append(showBlogUI);
 
 };
 
