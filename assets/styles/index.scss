@@ -14,8 +14,9 @@ h1 {
   font-family: $title-font;
 }
 
+
 body {
-  background-color: $dark-blue;
+  background-color: $slate-gray;
   color: $sunset;
   font-family: $body-font;
 }
@@ -34,6 +35,7 @@ body {
 .btn:hover {
   background-color: $pale-aqua;
 }
+// modals
 
 .modal-dialog {
   background-color: $salmon;
@@ -41,5 +43,9 @@ body {
 
 .modal-body {
   width: 30%;
+}
 
+label {
+  color: $dark-gray;
+  font-family: $body-font;
 }
