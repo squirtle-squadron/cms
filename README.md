@@ -11,9 +11,8 @@
 
 ---
 # Description:
-  Our application is a both place for a user to create their own content blog
-about whatever they want. As well as if they're feeling a bit more adventurous
-they can make their own content page. The page is a little more content then the
+  Our application is a place for a user to create their own content blog
+about whatever they want. They can make their own content page if they are feeling a bit more adventureous. The page is a little more content then the
 blog itself and allows for slightly more customization. However, it is still
 simple enough to allow a non technical user to create and customize. We have set
 some basic parameters they can use to change the display they way they like.
@@ -29,32 +28,31 @@ structure the front-end.
 ---
 # Approach:
   Coming into this project as a fresh to each other team, the first step we
-needed to take was getting to know each others wrok styles. We did this, becuase
+needed to take was getting to know each others work styles. We did this, because
 we quickly realized that this project was more then just our efforts as
 developers. It became more about learning and growing as a team. This was
-probably the biggest challenge of the project itself. Not only to be learning
-how as developers teamwork goes, but also as a new group itself. Learning our
+probably the biggest challenge of the project itself, not only to be learning
+how as developers teamwork is difficult, but also as a new group itself. Learning our
 stratagy to a good work flow was a huge accomplishment both individually, and as
 a group.
 
   After overcoming the new dynamic of working as a group, our next step was
 breaking down the project. We had to break it down into steps and after the
 first day it became much clearer what our pace should be. Of course starting a
-new project everyone has ideas of grandure and wants to implement everything
+new project everyone has ideas of grandeur and wants to implement everything
 cool we think of. So the first step to this was developing our scope for the
-project. With this defined we could decide what was needed for the success of
-the application and what could be implemented later as stretch goals.
+project. With this defined we could decide what were needed features and what could be implemented later as stretch goals.
 
-  We then broke it down via what was part of the back-end or front-end. Once we
+  We then broke it down via what was a front end issue and what was considered back end issues. Once we
 had a game plan we started work on the back end as a team. Since we felt we had
-a better structured game plan for the back end, stated there. After we broke
+a better structured game plan for the back end, we started there. After we broke
 down and tested the user model to make sure everything was set up correctly
 there, we broke into teams of two and each tackled a model. One was for our blog
 post and then the second was for our pages. Once that was done and working on
 the back-end, we moved forward to the front-end.
 
-  With the front end we broke it up a lot more. We started off programing as a
-group until we got a grasp of what were going to need. Once we were able to see
+  With the front end we broke it up a lot more. We started off programming as a
+group until we got a grasp of what were going to need. Once we were able to
 make a definitive plan we broke up into teams of two again. We as teams broke up
 the ajax requests, the handlebars, and base html/css into two sections. Once
 each part was finished we came together as a team to discuss both sides and
@@ -63,7 +61,7 @@ test them before we brought them together.
 ---
 # Major Hurdles and Unsolved Problems
 We ran into two major issues one was a [Git issue](https://github.com/ga-wdi-boston/team-project/issues/243) In this issue
-we had an problem with a merge conflict that eventually caused a bigger problem.
+we had a problem with a merge conflict that eventually caused a bigger problem.
 This happened because two groups were working on the same file in different
 branches.
 The second major issue, was a back end deploy issue that revolved around a small
