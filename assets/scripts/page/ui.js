@@ -8,19 +8,17 @@ const indexPages = function (data) {
   for (let i = 0; i < data.pages.length; i++) {
     let content = data.pages[i].body;
     data.pages[i].body = content.replace(/\n/g, '\n');
-    console.log(typeof content);
+    // console.log(typeof content);
 }
   let showPagesHtml = showPageTemplate({ pages: data.pages });
     // selects the content element and appends new HTML into it
     $('.log').html(showPagesHtml);
 };
 
-const showPage = function (data) {
-  console.log(data);
+const showPage = function () {
 };
 
 const singlePage = function (data){
-  // console.log(data);
   let showPagesHtml = showSinglePage({ page: data.page });
   // selects the content element and appends new HTML into it
   $('.kapat').modal('hide');
@@ -32,51 +30,52 @@ const showSuccess = function () {
 };
 
 const onShowError = function () {
-  // $('.log').text('This page does not exsist');
-  console.log("error");
 };
 
-const onPostSuccess = function () {
+const onCreateSuccess = function () {
+  alertify.success('Page Successfully Created!')
   $('.kapat').modal('hide');
   $('#page-index').click();
-};
-
-const onError = function () {
-  console.log("error");
-};
-
-const onUpdateSuccess = function () {
-  $('#page-index').click();
-  $('.kapat').modal('hide');
-};
-
-const afterUpdateSuccess = function (){
-
-};
-
-
-
-const onDeleteSuccess = function () {
-  $('#page-index').click();
-  $('.kapat').modal('hide');
 };
 
 const onCreateError = function() {
-  console.log('No Bueno...');
+  alertify.error('Please fill out all fields!')
 };
 
+
+const onUpdateSuccess = function () {
+  alertify.success('Page Updated Successfully!')
+  $('#page-index').click();
+  $('.kapat').modal('hide');
+};
+
+const onUpdateError = function () {
+  alertify.error('Please fill out all Fields!')
+};
+
+
+const onDeleteSuccess = function () {
+  alertify.success('Page Successfully Deleted!');
+  $('#page-index').click();
+  $('.kapat').modal('hide');
+};
+
+
+const onDeleteError = function () {
+  alertify.error('Page not Deleted!');
+};
 
 
 module.exports = {
   showPage,
   indexPages,
-  onError,
-  onPostSuccess,
+  onDeleteError,
+  onCreateSuccess,
   showSuccess,
   onShowError,
   onUpdateSuccess,
+  onUpdateError,
   onDeleteSuccess,
   onCreateError,
-  afterUpdateSuccess,
   singlePage
 };

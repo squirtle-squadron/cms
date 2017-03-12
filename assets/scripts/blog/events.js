@@ -35,7 +35,7 @@ const onShowBlog = function (event) {
   event.preventDefault();
   let blogId = $('#blog-id').val();
   if (blogId.length === 0){
-    console.log('No ID');
+    // console.log('No ID');
   } else{
       api.showBlog(blogId)
     .then(ui.showBlog)
