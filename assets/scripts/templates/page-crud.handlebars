@@ -1,0 +1,24 @@
+<button type="button" class="btn btn-default" data-toggle="modal" data-target="#create-page">
+          Create Webpage
+        </button>
+<!-- Modal -->
+<div class="modal kapat" id="create-page" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Create Webpage</h4>
+      </div>
+      <div class="modal-body">
+        <form class='create-page'>
+          <input type="text" name="page[header]" placeholder="Enter Title">
+          <textarea type="text" name="page[body]" placeholder="Enter Content for Body"></textarea>
+          <input type="text" name="page[footer]" placeholder="Enter Footer">
+          <button type="submit" class="btn btn-default create-webpage">Create Webpage</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<button type="button" class="btn btn-default" id="page-index">View Pages</button>

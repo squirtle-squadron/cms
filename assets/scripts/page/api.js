@@ -34,9 +34,9 @@ const showPage = function (id) {
   });
 };
 
-const destroyPage = function(data){
+const destroyPage = function(pageId){
   return $.ajax({
-    url: config.apiOrigin + '/pages/' + data.page.id,
+    url: config.apiOrigin + '/pages/' + pageId,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -44,9 +44,9 @@ const destroyPage = function(data){
   });
 };
 
-const updatePage = function(data) {
+const updatePage = function(data, accountId) {
   return $.ajax({
-    url: config.apiOrigin + '/pages/' + data.page.id,
+    url: config.apiOrigin + '/pages/' + accountId,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,

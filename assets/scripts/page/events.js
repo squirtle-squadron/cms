@@ -4,6 +4,7 @@ const api = require('./api.js');
 const ui = require('./ui.js');
 const store = require('../store');
 const getFormFields = require('../../../lib/get-form-fields');
+const emp = require('../emptyness.js');
 
 const onCreatePage = function (event) {
   event.preventDefault();
@@ -11,7 +12,7 @@ const onCreatePage = function (event) {
   api.createPage(data)
   .then((response) => {
     store.page = response.page;
-    ui.onPostSuccess(response.page);
+    ui.onCreateSuccess(response.page);
   }).catch(ui.onCreateError);
 };
 
@@ -27,7 +28,7 @@ const onShowPage = function (event) {
   event.preventDefault();
   let pageId = $('#page-id').val();
   if (pageId.length === 0){
-    console.log('No ID');
+    // console.log('No ID');
   } else{
       api.showPage(pageId)
     .then(ui.showPage)
@@ -35,20 +36,30 @@ const onShowPage = function (event) {
   }
 };
 
+const onShowSinglePage = function(event){
+  event.preventDefault();
+    api.showPage($(this).data('id'))
+    .then(ui.singlePage)
+    .catch(ui.onShowError);
+};
+
 const onDeletePage = function(event){
   event.preventDefault();
-  let data = getFormFields(event.target);
-  api.destroyPage(data)
-    .then(ui.onDeleteSuccess)
-    .catch(ui.onError);
+  api.destroyPage($(this).data('id'))
+    .then(ui.onDeleteSuccess())
+    .catch(ui.onDeleteError);
 };
 
 const onUpdatePage = function(event){
   event.preventDefault();
   let info = getFormFields(event.target);
-  api.updatePage(info)
-    .then(ui.onUpdateSuccess)
-    .catch(ui.onError);
+  if(emp.isBlank(info.page.body) || info.page.body.length === 1005){
+    alertify.error("Please Fill in Your Blog")
+  }else{
+    api.updatePage(info, $(this).data('id'))
+      .then(ui.onUpdateSuccess)
+      .catch(ui.onUpdateError);
+  }
 };
 
 module.exports = {
@@ -57,4 +68,5 @@ module.exports = {
   onIndexPage,
   onShowPage,
   onDeletePage,
+  onShowSinglePage
 };

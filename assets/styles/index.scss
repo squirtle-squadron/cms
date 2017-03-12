@@ -1,2 +1,65 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'colors';
+@import 'typography';
+
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: $title-font;
+}
+
+.jumbotron {
+  background-color: $light-green;
+    color: $slate-gray;
+}
+
+
+body {
+  background-color: $slate-gray;
+  color: $sunset;
+  font-family: $body-font;
+}
+
+.navbar {
+  background-color: $purpleg;
+  font-family: 'Shadows Into Light', cursive;
+}
+
+
+.btn {
+  background-color: $sea-blue;
+  color: $white;
+}
+
+.btn:hover {
+  background-color: $pale-aqua;
+}
+// modals
+
+.modal-dialog {
+  background-color: $salmon;
+};
+
+label {
+  color: $dark-gray;
+  font-family: $body-font;
+}
+
+input,
+textarea {
+  background-color: $ocean-blue;
+}
+
+.modal-body,
+.modal-dialog,
+.modal-header,
+fieldset,
+legend {
+  background-color: $salmon;
+}

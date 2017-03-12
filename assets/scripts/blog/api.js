@@ -24,6 +24,16 @@ const indexBlogs = function () {
   });
 };
 
+const indexBlogsSignedIn = function () {
+  return $.ajax({
+    url: config.apiOrigin + '/userblogs',
+    headers: {
+      Authorization: `Token token=${store.user.token}`
+    },
+    method: 'GET',
+  });
+};
+
 const showBlog = function (id) {
   return $.ajax({
     url: config.apiOrigin + '/blogs/' + id,
@@ -34,9 +44,9 @@ const showBlog = function (id) {
   });
 };
 
-const destroyBlog = function(data){
+const destroyBlog = function(id){
   return $.ajax({
-    url: config.apiOrigin + '/blogs/' + data.blog.id,
+    url: config.apiOrigin + '/blogs/' + id,
     headers: {
       Authorization: `Token token=${store.user.token}`
     },
@@ -44,9 +54,9 @@ const destroyBlog = function(data){
   });
 };
 
-const updateBlog = function(data) {
+const updateBlog = function(data, id) {
   return $.ajax({
-    url: config.apiOrigin + '/blogs/' + data.blog.id,
+    url: config.apiOrigin + '/blogs/' + id,
     method: 'PATCH',
     headers: {
       Authorization: `Token token=${store.user.token}`,
@@ -60,5 +70,6 @@ module.exports = {
   showBlog,
   indexBlogs,
   destroyBlog,
-  updateBlog
+  updateBlog,
+  indexBlogsSignedIn
 };
