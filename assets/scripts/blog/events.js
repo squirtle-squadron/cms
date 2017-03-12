@@ -23,6 +23,14 @@ const onIndexBlog = function (event) {
     .catch(ui.onShowError());
 };
 
+const onIndexBlogSignedIn = function (event) {
+  event.preventDefault();
+  let data = event;
+    api.indexBlogs(data)
+    .then(ui.indexBlogsSignedIn)
+    .catch(ui.onShowError);
+};
+
 const onShowBlog = function (event) {
   event.preventDefault();
   let blogId = $('#blog-id').val();
@@ -52,6 +60,7 @@ const onUpdateBlog = function(event){
 
 const addHandlers = () => {
   $('#blog-index').on('click', onIndexBlog);
+  $('.poop').on('click', onIndexBlogSignedIn);
   $('.show-blog').on('submit', onShowBlog);
   $('.create-blog').on('submit', onCreateBlog);
   $('#update-blog').on('submit', onUpdateBlog);
@@ -65,4 +74,5 @@ module.exports = {
   onShowBlog,
   onDeleteBlog,
   addHandlers,
+  onIndexBlogSignedIn
 };
