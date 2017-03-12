@@ -55,7 +55,7 @@ const onUpdateBlog = function(event){
   event.preventDefault();
   let info = getFormFields(event.target);
   if(emp.isBlank(info.blog.content) || info.blog.content.length === 1005){
-    alertify.error("Please Write A Content")
+    alertify.error("Please Write Some Content")
   } else{
     api.updateBlog(info, $(this).data('id'))
       .then(ui.onUpdateSuccess)
