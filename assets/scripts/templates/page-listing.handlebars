@@ -1,16 +1,14 @@
 {{#each pages as |page|}}
 
-  {{log  this}}
-
-   <div class="card card-1" data-id="{{page.id}}">
-     <h3>{{page.header}}</h3>
+   <div class="page-card card-1" data-id="{{page.id}}">
+     <h3>  Title: {{page.header}}</h3>
      <pre>{{page.body}}</pre>
-     <footer>{{page.footer}}</footer>
+     <div class="page-footer">
+       <footer>{{page.footer}}</footer>
+     </div>
 
      <!-- Button trigger modal -->
-     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{page.id}}">
-       Update!
-     </button>
+
 
      <!-- Modal -->
      <div class="modal kapat" id="mod{{page.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -40,8 +38,13 @@
          </div>
        </div>
      </div>
-     <button type="button" name="button" class="btn btn-default remove" data-id="{{page.id}}">Remove</button>
-     <button type="button" name="button" class="btn btn-default shows-page" data-id="{{page.id}}">Show</button>
+     <div class="page-card-btn">
+       <button type="button" class="btn btn-default" data-toggle="modal" data-target="#mod{{page.id}}">
+         Update!
+       </button>
+       <button type="button" name="button" class="btn btn-default remove" data-id="{{page.id}}">Remove</button>
+       <button type="button" name="button" class="btn btn-default shows-page" data-id="{{page.id}}">Show</button>
+     </div>
 
 
 
