@@ -1,11 +1,21 @@
 {{#each blogs as |blog|}}
 
 
-   <div class="jumbotron" data-id="{{blog.id}}">
+   <div class="blog-card card-1" data-id="{{blog.id}}">
      <h3>{{blog.title}}</h3>
+
+     <br>
+     <br>
+
      <p>{{blog.content}}</p>
+
+     <br>
+     <br>
+     <br>
+
      <footer>{{blog.author}}</footer>
-     <p>{{blog.updatedAt}}</p>
+     <br>
+     <p>Last Updated: {{blog.updatedAt}}</p>
    </div>
 
 {{/each}}

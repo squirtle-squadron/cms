@@ -3,7 +3,6 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import 'colors';
 @import 'typography';
 
-
 html {
   height: 100%;
   margin: 0;
@@ -12,33 +11,57 @@ html {
 
 h1 {
   font-family: $title-font;
+  font-size: 80px;
 }
 
-.jumbotron {
-  background-color: $light-green;
-    color: $slate-gray;
+h3 {
+  margin-top: 5px;
 }
 
+h4 {
+  color: black;
+}
+
+label {
+  width: 99%;
+  text-align: left;
+
+}
+
+.blog-card-list {
+  padding-top: 75px;
+
+}
+
+.blog-card > h5 {
+  float: right;
+  padding-top: 13px;
+}
+
+.need-space > input {
+  margin-left: 40px;
+}
 
 body {
-  background-color: $slate-gray;
-  color: $sunset;
+  background-color: $purple;
+  color: $white;
   font-family: $body-font;
 }
 
 .navbar {
   background-color: $purpleg;
+  color: $white;
   font-family: 'Shadows Into Light', cursive;
 }
 
-
 .btn {
-  background-color: $sea-blue;
+  background-color: $purpleg;
   color: $white;
 }
 
 .btn:hover {
-  background-color: $pale-aqua;
+  background-color: $dark-blue;
+  color: $white;
 }
 // modals
 
@@ -53,7 +76,12 @@ label {
 
 input,
 textarea {
-  background-color: $ocean-blue;
+  color: $dark-gray;
+  background-color: $white;
+}
+
+.page-blog {
+  float:left;
 }
 
 .modal-body,
@@ -61,5 +89,54 @@ textarea {
 .modal-header,
 fieldset,
 legend {
-  background-color: $salmon;
+  background-color: $white;
+}
+// Cards for pages
+
+.blog-card {
+  background: $b-aqua;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin: 1rem;
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+  width: 300px;
+  float: left;
+}
+
+.page-card {
+  background: $b-aqua;
+  border-radius: 2px;
+  display: inline-block;
+  height: 400px;
+  margin: 1rem;
+  padding-top: 10px;
+  position: relative;
+  width: 75%;
+  float: left;
+}
+
+.page-card-btn {
+  float: right;
+}
+
+.page-footer {
+  margin-left: 10px;
+}
+
+pre {
+  width: 35%x;
+  height: 65%;
+  margin: 20px;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+  transition: all .3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card-1:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .22);
 }

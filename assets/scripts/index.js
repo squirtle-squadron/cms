@@ -19,9 +19,9 @@ $(() => {
   $('#exit').hide();
   $('.create-new-album').hide();
   $('#exit').on('click', function () {
-    $('#sign-out').submit();
+  $('#sign-out').submit();
   });
-  $('.page-render').on('click', '#page-index', pageEvents.onIndexPage);
+  // $('.page-render').on('click', '#page-index', pageEvents.onIndexPage); Ask Alex why this was this way? Is it necessary? Does this work?
   $('.log').on('click','.shows-page', pageEvents.onShowSinglePage);
   // $('.show-page').on('submit', pageEvents.onShowPage);
   $('.page-render').on('submit', '.create-page', pageEvents.onCreatePage);

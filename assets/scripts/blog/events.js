@@ -55,7 +55,7 @@ const onUpdateBlog = function(event){
   event.preventDefault();
   let info = getFormFields(event.target);
   if(emp.isBlank(info.blog.content) || info.blog.content.length === 1005){
-    alertify.error("Please Write Some Content")
+    alertify.error("Please Write Some Content");
   } else{
     api.updateBlog(info, $(this).data('id'))
       .then(ui.onUpdateSuccess)
@@ -66,9 +66,8 @@ const onUpdateBlog = function(event){
 
 const addHandlers = () => {
   $('#blog-index').on('click', onIndexBlog);
-  $('.poop').on('click', onIndexBlogSignedIn);
   $('.show-blog').on('submit', onShowBlog);
-  $('.blog-render').on('submit','.create-blog', onCreateBlog);
+  $('.blog-render-signed-in').on('submit','.create-blog', onCreateBlog);
   $('#update-blog').on('submit', onUpdateBlog);
   $('.delete-blog').on('submit', onDeleteBlog);
 };
