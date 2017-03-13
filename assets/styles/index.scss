@@ -18,6 +18,30 @@ h3 {
   margin-top: 5px;
 }
 
+h4 {
+  color: black;
+}
+
+label {
+  width: 99%;
+  text-align: left;
+
+}
+
+.blog-card-list {
+  padding-top: 75px;
+
+}
+
+.blog-card > h5 {
+  float: right;
+  padding-top: 13px;
+}
+
+.need-space > input {
+  margin-left: 40px;
+}
+
 body {
   background-color: $purple;
   color: $white;
@@ -90,12 +114,11 @@ legend {
   margin: 1rem;
   padding-top: 10px;
   position: relative;
-  width: 60%;
+  width: 75%;
   float: left;
 }
 
 .page-card-btn {
-  padding-right: 20px;
   float: right;
 }
 
@@ -104,7 +127,7 @@ legend {
 }
 
 pre {
-  width: 40%x;
+  width: 35%x;
   height: 65%;
   margin: 20px;
 }
