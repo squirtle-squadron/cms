@@ -66,9 +66,8 @@ const onUpdateBlog = function(event){
 
 const addHandlers = () => {
   $('#blog-index').on('click', onIndexBlog);
-  // $('.poop').on('click', onIndexBlogSignedIn);
   $('.show-blog').on('submit', onShowBlog);
-  $('.blog-render').on('submit','.create-blog', onCreateBlog);
+  $('.blog-render-signed-in').on('submit','.create-blog', onCreateBlog);
   $('#update-blog').on('submit', onUpdateBlog);
   $('.delete-blog').on('submit', onDeleteBlog);
 };

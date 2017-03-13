@@ -14,6 +14,34 @@ h1 {
   font-size: 80px;
 }
 
+h3 {
+  margin-top: 5px;
+}
+
+h4 {
+  color: black;
+}
+
+label {
+  width: 99%;
+  text-align: left;
+
+}
+
+.blog-card-list {
+  padding-top: 75px;
+
+}
+
+.blog-card > h5 {
+  float: right;
+  padding-top: 13px;
+}
+
+.need-space > input {
+  margin-left: 40px;
+}
+
 body {
   background-color: $purple;
   color: $white;
@@ -32,7 +60,8 @@ body {
 }
 
 .btn:hover {
-  background-color: $b-aqua;
+  background-color: $dark-blue;
+  color: $white;
 }
 // modals
 
@@ -51,6 +80,10 @@ textarea {
   background-color: $white;
 }
 
+.page-blog {
+  float:left;
+}
+
 .modal-body,
 .modal-dialog,
 .modal-header,
@@ -60,7 +93,7 @@ legend {
 }
 // Cards for pages
 
-.card {
+.blog-card {
   background: $b-aqua;
   border-radius: 2px;
   display: inline-block;
@@ -70,6 +103,33 @@ legend {
   position: relative;
   text-align: center;
   width: 300px;
+  float: left;
+}
+
+.page-card {
+  background: $b-aqua;
+  border-radius: 2px;
+  display: inline-block;
+  height: 400px;
+  margin: 1rem;
+  padding-top: 10px;
+  position: relative;
+  width: 75%;
+  float: left;
+}
+
+.page-card-btn {
+  float: right;
+}
+
+.page-footer {
+  margin-left: 10px;
+}
+
+pre {
+  width: 35%x;
+  height: 65%;
+  margin: 20px;
 }
 
 .card-1 {
