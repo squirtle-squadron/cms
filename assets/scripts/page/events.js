@@ -54,7 +54,7 @@ const onUpdatePage = function(event){
   event.preventDefault();
   let info = getFormFields(event.target);
   if(emp.isBlank(info.page.body) || info.page.body.length === 1005){
-    alertify.error("Please Fill in Your Blog")
+    alertify.error("Please Fill in Your Blog");
   }else{
     api.updatePage(info, $(this).data('id'))
       .then(ui.onUpdateSuccess)

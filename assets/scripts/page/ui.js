@@ -5,6 +5,9 @@ const showPageTemplate = require('../templates/page-listing.handlebars');
 const showSinglePage = require('../templates/show-page.handlebars');
 
 const indexPages = function (data) {
+  if(data.pages.length === 0){
+  alertify.error("You don\'t have any pages!");
+}
   for (let i = 0; i < data.pages.length; i++) {
     let content = data.pages[i].body;
     data.pages[i].body = content.replace(/\n/g, '\n');
@@ -64,7 +67,7 @@ const onDeleteSuccess = function () {
 
 
 const onDeleteError = function () {
-  alertify.error('Page not Deleted!');
+  alertify.error('Something\'s not Right!');
 };
 
 

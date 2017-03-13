@@ -30,7 +30,7 @@ const onSignUp = function (event) {
   .then(ui.signUpSuccess)
   .catch(ui.signUpFailure);
 } else {
-  alertify.error('Passwords Must Match!')
+  alertify.error('Passwords Must Match!');
 }
 };
 

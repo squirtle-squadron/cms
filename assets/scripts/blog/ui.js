@@ -4,11 +4,17 @@ const showBlogSignedIn = require('../templates/blog-listing-signed-in.handlebars
 
 
 const indexBlogs = function (data) {
+  if(data.blogs.length === 0){
+  alertify.error("There are no blogs!");
+}
   let showBlogsHtml = showBlogTemplate({blogs: data.blogs});
   $('.log').html(showBlogsHtml);
 };
 
 const indexBlogsSignedIn = function (data) {
+  if(data.blogs.length === 0){
+  alertify.error("You don\'t have any blogs!");
+}
   let showBlogsHtml = showBlogSignedIn({blogs: data.blogs});
   $('.log').html(showBlogsHtml);
 };
