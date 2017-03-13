@@ -2,7 +2,8 @@
 
 # Links:
 [Back-end Repo URL](https://github.com/squirtle-squadron/cms-api)
-[Deployed Front end URL](https://squirtle-squadron.github.io/cms/#)
+[Deployed Front End URL](https://squirtle-squadron.github.io/cms/#)
+[Deployed Back End URL](https://obscure-temple-20926.herokuapp.com/)
 
 ---
 # Directions:

@@ -33,7 +33,7 @@ const onShowError = function () {
 
 const onPostSuccess = function () {
   alertify.success('Blog Successfully Created!');
-  $('.blog-render').find('.sign-in-show').click();
+  $('.blog-render-signed-in').find('.sign-in-show').click();
   $('.kapat').modal('hide');
   $('input, textarea').val('');
 };
@@ -48,7 +48,7 @@ const onError = function () {
 
 const onUpdateSuccess = function () {
   alertify.success('Blog Successfully Updated!');
-  $('.blog-render').find('.sign-in-show').click();
+  $('.blog-render-signed-in').find('.sign-in-show').click();
   $('.kapat').modal('hide');
   $('input, textarea').val('');
 };

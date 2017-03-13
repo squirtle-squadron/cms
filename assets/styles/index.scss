@@ -51,6 +51,10 @@ textarea {
   background-color: $white;
 }
 
+.page-blog {
+  float:left;
+}
+
 .modal-body,
 .modal-dialog,
 .modal-header,
@@ -70,6 +74,7 @@ legend {
   position: relative;
   text-align: center;
   width: 300px;
+  float: left;
 }
 
 .card-1 {

@@ -8,7 +8,7 @@ const showPageStuff = require('../templates/page-crud.handlebars');
 
 const signInSuccess = () => {
   alertify.success('Sign-in Succesful!');
-  $('.blog-render').on('click', '.sign-in-show', blogEvents.onIndexBlogSignedIn);
+  $('.blog-render-signed-in').on('click', '.sign-in-show', blogEvents.onIndexBlogSignedIn);
   $('.page-render').on('click', '#page-index', pageEvents.onIndexPage);
   $('#sign-in-dropdown').hide();
   $('#sign-up-dropdown').hide();
@@ -16,7 +16,7 @@ const signInSuccess = () => {
   $('#change-password-dropdown').show();
   $('.sign-in-modal').modal('hide');
   $('input').val('');
-  $('.blog-render').append(showBlogSignIn);
+  $('.blog-render-signed-in').append(showBlogSignIn);
   $('.page-render').append(showPageStuff);
   $('.log').empty();
 
@@ -57,8 +57,7 @@ alertify.success('Sign Out Complete!');
   $('#exit').hide();
   $('#sign-in-dropdown').show();
   $('#sign-up-dropdown').show();
-  $('.blog-render').empty();
-  $('.blog-render').append(showBlogUI);
+  $('.blog-render-signed-in').empty();
   $('.page-render').empty();
 
 };
