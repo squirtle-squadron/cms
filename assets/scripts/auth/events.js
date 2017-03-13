@@ -21,12 +21,17 @@ const onSignIn = function (event) {
 const onSignUp = function (event) {
   event.preventDefault();
   let data = getFormFields(event.target);
+  if (data.credentials.password === data.credentials.password_confirmation) {
   api.signUp(data)
+
   .then(()=> {
     onSignIn(event, data);
 })
   .then(ui.signUpSuccess)
   .catch(ui.signUpFailure);
+} else {
+  alertify.error('Passwords Must Match!')
+}
 };
 
 
